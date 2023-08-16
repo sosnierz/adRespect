@@ -1,0 +1,51 @@
+{
+  "name": "adrespect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "npm run build && webpack-dev-server --open --mode=development",
+    "lint": "eslint src --ext .js",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosnierz/adRespect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sosnierz/adRespect/issues"
+  },
+  "homepage": "https://github.com/sosnierz/adRespect#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "autoprefixer": "^10.4.15",
+    "breakpoint-sass": "^2.7.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^5.0.0",
+    "cssnano": "^4.0.5",
+    "eslint": "^8.18.0",
+    "eslint-webpack-plugin": "^2.7.0",
+    "html-webpack-plugin": "^4.5.2",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1",
+    "postcss": "^8.4.27",
+    "postcss-import": "^15.1.0",
+    "postcss-url": "^10.1.3"
+  }
+}

@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+@import "color";
+@import "mixins";
+@import "./sections/header";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter', sans-serif;
+  section{
+  height:1000px;
+  }
+  ul, ol{
+    margin: 0;
+    padding: 0;
+  }
+  h1,h2,h3,p,li,span{
+    font-family: 'Inter', sans-serif;
+  }
+}
