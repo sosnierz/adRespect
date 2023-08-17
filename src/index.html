@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./main.css">
+
     <title>GiardDesign</title>
 </head>
 <body>
@@ -14,7 +15,8 @@
     <div class="logo">
         <a href="#intro"><img src="./images/logo.png" alt="logo"></a>
     </div>
-    <div class="hamburger" id="mobile-menu">
+    <div id="hamburger">
+        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -45,11 +47,101 @@
     </ul>
 </nav>
 </header>
-<div data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-<section id-="intro">
 
+<div data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+<section id="intro">
+    <div class="splide">
+        <div class="splide__track">
+            <div class="splide__list">
+                <div class="splide__slide">
+                    <img src="./images/banner.png" class="d-block first" alt="green">
+                    <img src="./images/banner.png" class="d-block second " alt="green">
+                    <div class="carousel-caption ">
+                        <h2>Nowoczesna aranżacja Twojego ogrodu</h2>
+                        <p>Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym podejściem do&nbsp;każdego projektu. </p>
+                        <div class="buttons">
+                            <button class="green_btn"><a href="#footer">Skontaktuj się z nami</a></button>
+                            <button class="transp_btn"><a href="#realizacje">Zobacz nasze realizacje <img src="./images/arrow_green.svg" alt=""></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="splide__slide">
+                    <img src="./images/banner.png" class="d-block first" alt="green">
+                    <img src="./images/banner.png" class="d-block second " alt="green">
+                    <div class="carousel-caption ">
+                        <h2>Nowoczesna aranżacja Twojego tarasu</h2>
+                        <p>Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym podejściem do&nbsp;każdego projektu. </p>
+                        <div class="buttons">
+                            <button class="green_btn"><a href="#footer">Skontaktuj się z nami</a></button>
+                            <button class="transp_btn"><a href="#realizacje">Zobacz nasze realizacje <img src="./images/arrow_green.svg" alt=""></a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="splide__slide">
+                    <img src="./images/banner.png" class="d-block first" alt="green">
+                    <img src="./images/banner.png" class="d-block second " alt="green">
+                    <div class="carousel-caption ">
+                        <h2>Nowoczesna aranżacja Twojego ogrodu</h2>
+                        <p>Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym podejściem do&nbsp;każdego projektu. </p>
+                        <div class="buttons">
+                            <button class="green_btn"><a href="#footer">Skontaktuj się z nami</a></button>
+                            <button class="transp_btn"><a href="#realizacje">Zobacz nasze realizacje <img src="./images/arrow_green.svg" alt=""></a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slider-timer"></div>
+    </div>
 </section>
-<section id="oferta">Oferta</section>
+<section id="oferta">
+    <div class="offer">
+        <div class="offer__title">
+            <h3 class="nav_title">Oferta</h3>
+            <h2 class="section_title">
+                Działamy <span>kompleksowo</span>
+            </h2>
+        </div>
+        <div class="offer__cross">
+            <div class="offer__cross__item">
+                <div class="offer__cross__item--img">
+                    <img src="./images/project.svg" alt="projekty">
+                </div>
+                <div class="offer__cross__item--txt">
+                    <h4>Projekty</h4>
+                    <p>Zaprojektujemy Twój ogród w&nbsp;nowoczesnym stylu i&nbsp;z&nbsp;najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+                </div>
+                <div class="offer__cross__item--button">
+                   <button><a href="/projekty">Dowiedz się więcej <img src="./images/arrow_green.svg" alt="strzałka w bok"></a></button>
+                </div>
+            </div>
+            <div class="offer__cross__item">
+                <div class="offer__cross__item--img">
+                    <img src="./images/visualization.svg" alt="wizaulizacje">
+                </div>
+                <div class="offer__cross__item--txt">
+                    <h4>Wizualizacje</h4>
+                    <p>Przedstawimy Ci projekty koncepcyjne w&nbsp;postaci wirtualnego spaceru animowanego w&nbsp;technologii 3D.</p>
+                </div>
+                <div class="offer__cross__item--button">
+                   <button><a href="/">Dowiedz się więcej <img src="./images/arrow_green.svg" alt="strzałka w bok"></a></button>
+                </div>
+            </div>
+            <div class="offer__cross__item">
+                <div class="offer__cross__item--img">
+                    <img src="./images/realization.svg" alt="realizacje">
+                </div>
+                <div class="offer__cross__item--txt">
+                    <h4>Realizacje</h4>
+                    <p>Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i&nbsp;zaawansowanych technologii.</p>
+                </div>
+                <div class="offer__cross__item--button">
+                   <button><a href="#realizacje">Dowiedz się więcej <img src="./images/arrow_green.svg" alt="strzałka w bok"></a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section id="o_firmie">ff</section>
 <section id="realizacje">fff</section>
 <section id="instagram">ff</section>
@@ -60,5 +152,6 @@
 </footer>
 
 <script src="./main.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,191 @@
+section#intro{
+padding: 0px;
+
+  .splide{
+    height: 100%;
+    #slider-timer {
+      width: 100vw;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $col-beige;
+      max-width: var(--mw);
+      transition: opacity 0.3s;
+      opacity: 0;
+      &.visible {
+        opacity: 1;
+      }
+    }
+    .splide__pagination{
+      display: none !important;
+    }
+    .splide__arrows{
+      .splide__arrow--prev, .splide__arrow--next{
+        width: 96px;
+        height: 96px;
+        background: $col-grey;
+        border-radius: 0px;
+        opacity: 1;
+        transition: opacity .4s;
+        @media(max-width: 576px){
+          background: #f5f0ec61;
+          height: 12%;
+
+        }
+        svg{
+          width: 48px;
+          height: 48px;
+        }
+        &:hover{
+          opacity: .7;
+        }
+      }
+      .splide__arrow--next{
+        top: unset;
+        bottom: 0;
+        right: 0;
+        transform: translate(0px);
+        svg{
+          transform: translateX(-16px);
+        }
+
+      }.splide__arrow--prev{
+
+        top: unset;
+        bottom: 0;
+        right: 96px;
+        left:unset;
+        transform: translate(0px);
+      svg{
+        transform: translateX(16px)  scaleX(-1);
+      }
+
+      }
+    }
+    .splide__slide {
+      height: 737px;
+        background: $col-beige;
+        width: 100%;
+        grid-template-columns:35% 752px 1fr;
+        grid-template-rows: 144.5px auto 144.5px;
+        align-items: stretch;
+        justify-content: stretch;
+        align-content: stretch;
+        height: 737px;
+        display: grid;
+        @media(max-width: 1920px){
+          grid-template-columns:752px 1fr;
+        }
+      @media(max-width: 991px){
+        grid-template-columns:100%;
+        grid-template-rows: 20% auto 20%;
+        background: transparent;
+       height: calc(100vh - 130px);
+      }
+      @media(max-width: 576px){
+        grid-template-rows: 12% auto 12%;
+        height: calc(100vh - 90px);
+      }
+        .d-block{
+          display: block;
+          height: 737px;
+          width: 100%;
+          object-fit: cover;
+
+        }
+        .first {
+          grid-column: 1/2;
+          grid-row: 1 / 4;
+          @media(max-width: 1920px){
+           display: none !important;
+          }
+        }
+        .second {
+          grid-column: 3 / 4;
+          grid-row: 1 / 4;
+          @media(max-width: 1920px){
+            grid-column: 2 / 3;
+          }
+          @media(max-width: 991px){
+            grid-column: 1 / 2;
+            height: calc(100vh - 130px);
+          }
+          @media(max-width: 576px){
+            height: calc(100vh - 90px);
+          }
+        }
+
+        .carousel-caption {
+          grid-column: 2 / 3;
+          grid-row: 2/ 3;
+          position: static;
+          padding: 0 150px 0 89px;
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+          align-items: stretch;
+          width: 100%;
+          height: 100%;
+          gap:44px;
+          @media(max-width: 1920px){
+            grid-column: 1 / 2;
+          }
+          @media(max-width: 991px){
+            grid-column: 1 / 2;
+            background: $col-beige;
+            padding: 0 50px;
+            gap:44px;
+            justify-content: center;
+            align-items: center;
+          }
+          @media(max-width: 576px){
+            gap:25px;
+            padding: 20px;
+          }
+          h2,p {
+            text-align: left;
+          }
+          h2{
+            font-family: 'Montserrat', sans-serif;
+            color: $col-black;
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 116.667% ;
+            @media(max-width: 991px){
+              text-align: center;
+            }
+            @media(max-width: 576px){
+              font-size: 30px;
+            }
+          }
+          p{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            @media(max-width: 576px){
+              font-size: 14px;
+
+            }
+          }
+          .buttons{
+            display: flex;
+            width: 100%;
+            padding-top: 28px ;
+            gap: 36px;
+            @media(max-width: 991px){
+              justify-content: center;
+            }
+            @media(max-width: 576px){
+              flex-direction: column;
+              padding-top: 12px ;
+              gap: 20px;
+            }
+          }
+        }
+      }
+
+  }
+
+}

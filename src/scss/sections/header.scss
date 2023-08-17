@@ -1,4 +1,5 @@
-.header{
+@import "hamburger";
+.header {
   background: $col-white;
   display: flex;
   justify-content: space-between;
@@ -6,43 +7,84 @@
   width: 100%;
   height: 74px;
   padding: 0 89px;
-  position: static;
+  position: relative;
   transition: top .3s;
-
-  &.fixed{
-    position: sticky ;
+  z-index: 100;
+  @media (max-width: 992px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 576px) {
+    padding: 0 30px;
+  }
+  &.fixed {
+    position: sticky;
     top: -78px;
     left: 0;
-    -webkit-box-shadow: -1px 55px 36px -43px rgba(2, 2, 2, 1);
-    -moz-box-shadow: -1px 55px 36px -43px rgba(2, 2, 2, 1);
-    box-shadow: -1px 55px 36px -43px rgba(2, 2, 2, 1);
     z-index: 100;
-    &.go_down{
-      top:0px;
-      -webkit-box-shadow: -1px 55px 36px -43px rgba(2, 2, 2, 1);
-      -moz-box-shadow: -1px 55px 36px -43px rgba(2, 2, 2, 1);
-      box-shadow: -1px 55px 36px -43px rgba(2, 2, 2, 1);
+
+    &.go_down {
+      top: 0px;
     }
   }
-  .logo{
+
+  .logo {
     width: 200px;
     height: 24px;
-    img{
+
+    img {
       height: 24px;
       width: auto;
       object-fit: cover;
     }
   }
+
+
   //MAIN NAV
-  #navbar-menu ul{
+  #navbar-menu {
+    @media (max-width: 992px) {
+      position: absolute;
+      right: -90%;
+      top: 74px;
+      width: 45%;
+      height: calc(100vh - 74px);
+      background: #FFFFFF;
+      z-index: 99;
+      transition: right .3s;
+      overflow: hidden;
+    }
+    &.is-active{
+      @media (max-width: 992px) {
+        width: 45%;
+        right: 0;
+      }
+      @media (max-width: 767px) {
+        width: 60%;
+      }
+      @media (max-width: 576px) {
+        width: 85%;
+      }
+    }
+
+  ul {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:48px;
+    gap: 48px;
     list-style: none;
-    li{
-      a{
+    @media (max-width: 992px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 60px 20px 0 45px;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    li {
+      @media (max-width: 992px) {
+        height: 50px;
+        width: 100%;
+      }
+      a {
         text-decoration: none;
         text-align: center;
         font-size: 14px;
@@ -51,39 +93,62 @@
         letter-spacing: -0.14px;
         color: $col-black;
         transition: all .4s;
-
-        &:hover{
+        @media (max-width: 992px) {
+         display: inline-block;
+          width: 100%;
+          height: 100%;
+          line-height: 50px;
+          font-size: 16px;
+          text-align: left;
+        }
+        &:hover {
           color: $col-beige;
-          img{
+
+          img {
             filter: invert(89%) sepia(11%) saturate(770%) hue-rotate(331deg) brightness(90%) contrast(92%);
           }
         }
       }
-     //LI-SEARCH
-      &.nav-menu_search{
+
+      //LI-SEARCH
+      &.nav-menu_search {
         cursor: pointer;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
-        gap:3px;
-        img{
+        gap: 3px;
+        @media (max-width: 992px) {
+          margin-top: 50px;
+          align-items: center;
+        }
+        img {
           height: 24px;
           width: auto;
           transition: filter .4s;
-          &:hover{
+
+          &:hover {
             filter: invert(89%) sepia(11%) saturate(770%) hue-rotate(331deg) brightness(90%) contrast(92%);
           }
         }
-        .search_content{
+
+        .search_content {
           width: 220px;
           height: 100%;
           max-width: 0px;
           overflow: hidden;
           transition: max-width .4s;
-          &.active{
+          @media (max-width: 992px) {
+            max-width: 100%;
+            width: 100%;
+
+            border-bottom: 1px solid $col-black;
+          }
+
+          &.active {
             max-width: 220px;
           }
-          input{
+
+          input {
             width: 100%;
             height: 100%;
             border: none;
@@ -92,16 +157,26 @@
             font-family: 'Inter', sans-serif;
             font-size: 14px;
             letter-spacing: -0.14px;
-            &::placeholder{
+            @media (max-width: 992px) {
+              font-size: 16px;
+              padding: 15px 10px;
+            }
+
+            &::placeholder {
               font-family: 'Inter', sans-serif;
               font-size: 14px;
               letter-spacing: -0.14px;
+              @media (max-width: 992px) {
+                font-size: 16px;
+              }
             }
-            &:focus{
+
+            &:focus {
               outline-style: none;
               box-shadow: none;
             }
-        }
+          }
+
           input[type="search"]::-webkit-search-cancel-button {
             -webkit-appearance: none;
             background-color: $col-black;
@@ -114,57 +189,81 @@
         }
       }
     }
+
     //SUBMENU - FIRST LI DROPDOWN
-    .submenu{
+    .submenu {
       position: relative;
-      a{
-        img{
+      @media (max-width: 992px) {
+        height: 50px;
+        transition: height .4s;
+
+      }
+
+      a {
+        img {
           margin-bottom: 3px;
           margin-left: 5px;
           transition: all .4s;
         }
       }
-      &.active{
-        a img{
+
+      &.active {
+        @media (max-width: 992px) {
+          height: 230px;
+        }
+        a img {
           transform: rotate(180deg);
         }
       }
+
       //SUBMENU NAV
-      &__dropdown{
+      &__dropdown {
         position: absolute;
         left: 0;
-        top:30px;
+        top: 30px;
         width: 150px;
         height: 120px;
         display: flex;
         flex-direction: column;
         background: #FFFFFF;
-        gap:8px;
+        gap: 8px;
         border-radius: 5px;
         align-items: flex-start;
         max-height: 0px;
         padding: 0px;
         overflow: hidden;
         transition: all .4s;
-        &.active{
+        @media (max-width: 992px) {
+          width: 100%;
+          height: 170px;
+          top: 35px;
+        }
+        &.active {
           max-height: 120px;
           padding: 20px 15px;
-
+          @media (max-width: 992px) {
+            max-height: 170px;
+            padding: 10px 30px;
+          }
         }
-        &__item{
+
+        &__item {
           transition: all .3s;
           width: 100%;
-          &:hover{
+
+          &:hover {
             border-left: 5px solid $col-beige;
             padding-left: 5px;
             text-decoration: none;
           }
-          a{
+
+          a {
             width: 100%;
             height: 100%;
             display: inline-block;
             text-align: left;
-            &:hover{
+
+            &:hover {
               color: unset !important;
             }
           }
@@ -173,5 +272,5 @@
 
     }
   }
-
+}
 }
