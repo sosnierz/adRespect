@@ -57,7 +57,7 @@ section#o_firmie{
       transform: scale(1.0);
     }
     @media(max-width: 991px){
-      background: $col-green;
+      background: $col-green-opacity;
       padding: 0 70px;
       grid-row: 1/4;
       width: 100%;
