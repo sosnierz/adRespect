@@ -28,6 +28,13 @@ padding: 0;
         border-radius: 0;
         opacity: 1;
         transition: opacity .4s;
+        @media screen and (max-width:1000px) and (orientation:landscape){
+          background: #f5f0ec61;
+          height: 20%;
+        }
+        @media screen and (max-width:700px) and (max-height:390px) and (orientation:landscape){
+          display: none;
+        }
         @media(max-width: 576px){
           background: #f5f0ec61;
           height: 12%;
@@ -76,16 +83,19 @@ padding: 0;
         @media(max-width: 1920px){
           grid-template-columns:752px 1fr;
         }
-      @media(max-width: 991px){
-        grid-template-columns:100%;
-        grid-template-rows: 20% auto 20%;
-        background: transparent;
-       height: calc(100vh - 130px);
+        @media(max-width: 991px){
+          grid-template-columns:100%;
+          grid-template-rows: 20% auto 20%;
+          background: transparent;
+         height: calc(100vh - 130px);
+        }
+      @media screen and (max-width:1000px) and (orientation:landscape){
+        height: calc(100vh - 74px);
       }
-      @media(max-width: 576px){
-        grid-template-rows: 12% auto 12%;
-        height: calc(100vh - 90px);
-      }
+        @media(max-width: 576px){
+          grid-template-rows: 12% auto 12%;
+          height: calc(100vh - 90px);
+        }
         .d-block{
           display: block;
           height: 737px;
@@ -109,6 +119,9 @@ padding: 0;
           @media(max-width: 991px){
             grid-column: 1 / 2;
             height: calc(100vh - 130px);
+          }
+          @media screen and (max-width:1000px) and (orientation:landscape){
+            height: calc(100vh - 74px);
           }
           @media(max-width: 576px){
             height: calc(100vh - 90px);
@@ -138,6 +151,11 @@ padding: 0;
             justify-content: center;
             align-items: center;
           }
+          @media screen and (max-width:1000px) and (orientation:landscape){
+            padding-top: 15px;
+            padding-bottom: 15px;
+            gap:10px;
+          }
           @media(max-width: 576px){
             gap:25px;
             padding: 20px;
@@ -153,6 +171,9 @@ padding: 0;
             line-height: 116.667% ;
             @media(max-width: 991px){
               text-align: center;
+            }
+            @media screen and (max-width:1000px) and (orientation:landscape){
+              font-size: 30px;
             }
             @media(max-width: 576px){
               font-size: 30px;
@@ -175,6 +196,9 @@ padding: 0;
             gap: 36px;
             @media(max-width: 991px){
               justify-content: center;
+            }
+            @media screen and (max-width:1000px) and (orientation:landscape){
+              padding-top: 10px ;
             }
             @media(max-width: 576px){
               flex-direction: column;

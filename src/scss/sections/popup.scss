@@ -12,6 +12,12 @@
   max-height: 0;
   overflow: hidden;
   transition: all .4s;
+  @media screen and (max-width:1000px) and (orientation:landscape){
+    padding: 10px;
+  }
+  @media (max-width:767px){
+    padding: 10px;
+  }
   &.show {
     max-height: 100vh;
    top:0;
@@ -40,32 +46,89 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    @media screen and (max-width:1000px) and (orientation:landscape){
+      max-height: 90%;
+
+    }
+    @media (max-width: 767px) {
+      justify-content: center;
+      position: relative;
+    }
     .arrow{
       width: 45px;
+      @media (max-width: 767px) {
+        position: absolute;
+        bottom:0;
+        left: 10%;
+        transform: translateX(-50%);
+      }
       img{
         width: 100%;
         height: auto ;
       }
     }
-  .next_arrow{
-    img{
-      transform: scale(-1);
+    .next_arrow{
+      @media (max-width: 767px) {
+        position: absolute;
+        bottom:0;
+        right: 10%;
+        left: unset;
+        transform: translateX(50%);
+      }
+      img{
+        transform: scale(-1);
+      }
     }
-  }
     &__img{
-
+      @media screen and (max-width:1000px) and (orientation:landscape){
+        max-height: 100%;
+        overflow: hidden;
+        width: 100%;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+        height: 90%;
+        overflow: hidden;
+      }
       img{
         opacity: 1;
         animation-duration: 1s;
         animation-name: slidein;
         transform: scale(1.1);
+        @media (max-width: 767px) {
+          animation-name: slideinMobile;
+          justify-content: center;
+          transform: scale(1);
+          max-height: 90%;
+          width: 100%;
+          object-fit: cover;
+        }
+        @media screen and (max-width:1000px) and (orientation:landscape){
+          animation-name: slideinMobile;
+          justify-content: center;
+          transform: scale(1);
+          max-height: 90%;
+          width: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
 }
 @keyframes slidein {
   from {opacity: 0;
-        transform: scale(1)}
+        transform: scale(1);
+  }
   to {opacity: 1;
-    transform: scale(1.1)}
+    transform: scale(1.1);
+  }
+}
+@keyframes slideinMobile {
+  from {opacity: 0;
+      transform: scale(.7);
+
+  }
+  to {opacity: 1;
+      transform: scale(1);
+  }
 }

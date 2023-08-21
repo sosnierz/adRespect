@@ -156,7 +156,7 @@ function checkForSplide() {
             let interval;
 
             const splide = new Splide('.splide', {
-                autoplay: true,
+                autoplay: false,
                 interval: 5500,
                 type: 'loop',
                 dragMinThreshold: {
