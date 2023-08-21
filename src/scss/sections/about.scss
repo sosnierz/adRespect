@@ -1,12 +1,12 @@
 section#o_firmie{
-  padding: 0px;
+  padding: 0;
 }
 .about{
   background: $col-green;
   display: grid;
   width: 100%;
   grid-template-columns: 47.78% auto;
-  grid-template-rows: 18.75% 1fr 18.75% ;
+  grid-template-rows: 18.75% 1fr 18.75%;
   column-gap: 11.11%;
   align-items: center;
   max-height: 90vh;
@@ -20,7 +20,7 @@ section#o_firmie{
   }
   @media(max-width: 991px){
    background: transparent;
-      column-gap: 0px;
+      column-gap: 0;
   }
   @media(max-width: 767px){
     grid-template-columns:10px auto 10px;
@@ -110,7 +110,7 @@ section#o_firmie{
         img{
           filter: brightness(0) saturate(100%) invert(98%) sepia(96%) saturate(620%) hue-rotate(291deg) brightness(112%) contrast(91%);
           transform: rotate(-90deg);
-          padding-left: 0px;
+          padding-left: 0;
           padding-top: 8px;
         }
       }

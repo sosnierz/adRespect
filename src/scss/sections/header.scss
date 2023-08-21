@@ -23,7 +23,7 @@
     z-index: 100;
 
     &.go_down {
-      top: 0px;
+      top: 0;
     }
   }
 
@@ -145,7 +145,7 @@
         .search_content {
           width: 220px;
           height: 100%;
-          max-width: 0px;
+          max-width: 0;
           overflow: hidden;
           transition: max-width .4s;
           @media (max-width: 992px) {
@@ -238,8 +238,8 @@
         gap: 8px;
         border-radius: 5px;
         align-items: flex-start;
-        max-height: 0px;
-        padding: 0px;
+        max-height: 0;
+        padding: 0;
         overflow: hidden;
         transition: all .4s;
         @media (max-width: 992px) {

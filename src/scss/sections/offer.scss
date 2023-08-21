@@ -29,7 +29,7 @@
       margin-left: 55px ;
     }
     @media(max-width: 992px){
-      margin-left: 0px ;
+      margin-left: 0 ;
     }
     h2.section_title{
       margin-top: -16px;
@@ -121,9 +121,9 @@
         }
       }
       &:hover{
-        -webkit-box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 1);
-        -moz-box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 1);
-        box-shadow: 0px 0px 26px -8px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0 0 26px -8px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 0 0 26px -8px rgba(0, 0, 0, 1);
+        box-shadow: 0 0 26px -8px rgba(0, 0, 0, 1);
         .offer__cross__item--txt h4{
           color: $col-green;
         }

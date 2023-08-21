@@ -121,7 +121,7 @@ import WOW from 'wow.js';
         }
     }
 
-// LINK ANCHOR IN SOME ELEMENT
+// LINK ANCHOR IN CROSS
     const anchor_buttons = document.querySelectorAll('.anchor-button');
     for (let button of anchor_buttons) {
         button.addEventListener('click',anchorClick);
