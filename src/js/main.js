@@ -40,17 +40,23 @@ import WOW from 'wow.js';
             hamburger.classList.toggle('open');
             nav_container.classList.toggle('is-active');
             if (menuDarkener.classList.contains('display')) {
+                header.style.position = "static";
+                header.style.top = 'unset';
                 menuDarkener.classList.remove('opacity');
                 setTimeout(() => {
                     menuDarkener.classList.remove('display');
                 }, 300);
             } else {
+                header.style.position = "fixed";
+                header.style.top = '0px';
                 menuDarkener.classList.add('display');
                 setTimeout(() => {
                     menuDarkener.classList.add('opacity');
                 }, 5);
             }
             menuDarkener.addEventListener('click', () => {
+                header.style.position = "static";
+                header.style.top = 'unset';
                 hamburger.classList.remove('open');
                 nav_container.classList.remove('is-active');
                 menuDarkener.classList.remove('opacity');
@@ -115,7 +121,7 @@ import WOW from 'wow.js';
         }
     }
 
-// LINK ANCHORE IN SOME ELEMENT
+// LINK ANCHOR IN SOME ELEMENT
     const anchor_buttons = document.querySelectorAll('.anchor-button');
     for (let button of anchor_buttons) {
         button.addEventListener('click',anchorClick);

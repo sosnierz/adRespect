@@ -42,11 +42,11 @@
   //MAIN NAV
   #navbar-menu {
     @media (max-width: 992px) {
-      position: absolute;
+      position: fixed;
       right: -90%;
-      top: 74px;
+      top: 72px;
       width: 45%;
-      height: calc(100vh - 74px);
+      height: calc(100vh);
       background: #FFFFFF;
       z-index: 99;
       transition: right .3s;
@@ -90,6 +90,7 @@
       @media (max-width: 992px) {
         height: 50px;
         width: 100%;
+        line-height: 50px;
       }
       a {
         text-decoration: none;
@@ -156,6 +157,9 @@
 
           &.active {
             max-width: 220px;
+            @media (max-width: 992px) {
+              max-width: 100%;
+            }
           }
 
           input {
