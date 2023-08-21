@@ -16729,6 +16729,14 @@ textarea.form-control-lg {
   height: 30px;
   overflow: hidden;
 }
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+  .popup__close {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 2;
+  }
+}
 .popup__close img {
   height: 100%;
   width: auto;
@@ -16739,11 +16747,6 @@ textarea.form-control-lg {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-@media screen and (max-width: 1000px) and (orientation: landscape) {
-  .popup__content {
-    max-height: 90%;
-  }
 }
 @media (max-width: 767px) {
   .popup__content {
@@ -16757,9 +16760,10 @@ textarea.form-control-lg {
 @media (max-width: 767px) {
   .popup__content .arrow {
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     left: 10%;
     transform: translateX(-50%);
+    z-index: 2;
   }
 }
 .popup__content .arrow img {
@@ -16769,10 +16773,11 @@ textarea.form-control-lg {
 @media (max-width: 767px) {
   .popup__content .next_arrow {
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     right: 10%;
     left: unset;
     transform: translateX(50%);
+    z-index: 2;
   }
 }
 .popup__content .next_arrow img {
