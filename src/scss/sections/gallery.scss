@@ -1,0 +1,60 @@
+
+#realizacje{
+  position: relative;
+  padding-bottom: 44px;
+  background: #DCC1AB;
+  .container{
+    padding-left: 100px;
+    h2{
+      margin-top: 15px;
+    }
+  }
+  #macy-container {
+    width: 90%;
+    position: relative;
+    margin: 96px auto 0px;
+    height:var(--g-height) !important;
+    //max-height: var(--g-height);
+    overflow: hidden;
+    transition: height .3s;
+    @media (max-width: 1680px) {
+      width: 100%;
+
+    }
+    .grid-item{
+      width: 100%;
+      cursor: pointer;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  }
+  .button{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0.00) 100%);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: height .3s;
+    .transp_btn{
+        border-color: $col-black;
+        color:$col-black;
+      margin-bottom: 49.5px;
+      img{
+        filter: brightness(0) saturate(100%) invert(0%) sepia(44%) saturate(7500%) hue-rotate(187deg) brightness(97%) contrast(87%);
+      }
+      &:hover {
+        color: $col-grey;
+        img{
+          filter: brightness(0) saturate(100%) invert(98%) sepia(96%) saturate(620%) hue-rotate(291deg) brightness(112%) contrast(91%);
+        }
+      }
+    }
+  }
+}

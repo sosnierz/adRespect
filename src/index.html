@@ -11,6 +11,18 @@
 </head>
 <body>
 <div class="blur"></div>
+<div class="popup">
+    <div class="popup__close"><img src="./images/cross.svg" alt="zamknij" onclick="closePopup()"></div>
+    <div class="popup__content">
+        <div class="prev_arrow arrow" onclick="prevImg(this)">
+            <img src="./images/arrow_popup.svg" alt="strzałka w lewo">
+        </div>
+        <div class="popup__content__img"></div>
+        <div class="next_arrow arrow" onclick="nextImg(this)">
+            <img src="./images/arrow_popup.svg" alt="strzałka w prawo">
+        </div>
+    </div>
+</div>
 <header class="header">
     <div class="logo">
         <a href="#intro"><img src="./images/logo.png" alt="logo"></a>
@@ -26,11 +38,11 @@
     <nav id="navbar-menu" class="nav-menu">
     <ul>
         <li class="nav-menu__item submenu">
-            <a href="#" >Oferta <img src="./images/arrow_down.svg" alt="strzałka w dół"></a>
+            Oferta <img src="./images/arrow_down.svg" alt="strzałka w dół">
             <ul class="submenu__dropdown ">
                 <li class="submenu__dropdown__item "><a href="/projekty">Projekt</a></li>
                 <li class="submenu__dropdown__item "><a href="/wizualizacje">Wizualizacja</a></li>
-                <li class="submenu__dropdown__item "><a  href="/realizacje">Realizacja</a></li>
+                <li class="submenu__dropdown__item "><a  href="#realizacje">Realizacja</a></li>
             </ul>
         </li>
         <li class="nav-menu__item"><a href="#o_firmie">o firmie</a></li>
@@ -56,7 +68,7 @@
                 <div class="splide__slide">
                     <img src="./images/banner.png" class="d-block first" alt="green">
                     <img src="./images/banner.png" class="d-block second " alt="green">
-                    <div class="carousel-caption ">
+                    <div class="carousel-caption wow animate__animated animate__backInUp">
                         <h2>Nowoczesna aranżacja Twojego ogrodu</h2>
                         <p>Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z&nbsp;indywidualnym podejściem do&nbsp;każdego projektu. </p>
                         <div class="buttons">
@@ -98,13 +110,13 @@
     <div class="offer">
         <div class="offer__title">
             <h3 class="nav_title">Oferta</h3>
-            <h2 class="section_title">
+            <h2 class="section_title wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
                 Działamy <span>kompleksowo</span>
             </h2>
             <p class="section_p">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i&nbsp;wcielimy w&nbsp;życie, a&nbsp;na&nbsp;każdym etapie posłużymy radą i&nbsp;wieloletnim doświadczeniem. </p>
         </div>
         <div class="offer__cross">
-            <div class="offer__cross__item anchor-button">
+            <div class="offer__cross__item anchor-button wow animate__animated animate__fadeInUpBig" data-wow-duration=".6s" data-wow-delay="1s">
                 <div class="offer__cross__item--img">
                     <img src="./images/project.svg" alt="projekty">
                 </div>
@@ -116,7 +128,7 @@
                    <button><a href="/projekty">Dowiedz się więcej <img src="./images/arrow_green.svg" alt="strzałka w bok"></a></button>
                 </div>
             </div>
-            <div class="offer__cross__item">
+            <div class="offer__cross__item anchor-button wow animate__animated animate__fadeInUpBig" data-wow-duration=".6s" data-wow-delay="1.4s">
                 <div class="offer__cross__item--img">
                     <img src="./images/visualization.svg" alt="wizaulizacje">
                 </div>
@@ -125,10 +137,10 @@
                     <p>Przedstawimy Ci projekty koncepcyjne w&nbsp;postaci wirtualnego spaceru animowanego w&nbsp;technologii 3D.</p>
                 </div>
                 <div class="offer__cross__item--button">
-                   <button><a href="/">Dowiedz się więcej <img src="./images/arrow_green.svg" alt="strzałka w bok"></a></button>
+                   <button><a href="/wizualizacje">Dowiedz się więcej <img src="./images/arrow_green.svg" alt="strzałka w bok"></a></button>
                 </div>
             </div>
-            <div class="offer__cross__item">
+            <div class="offer__cross__item anchor-button wow animate__animated animate__fadeInUpBig" data-wow-duration=".6s" data-wow-delay="1.8s">
                 <div class="offer__cross__item--img">
                     <img src="./images/realization.svg" alt="realizacje">
                 </div>
@@ -146,19 +158,50 @@
 <section id="o_firmie" class="about">
         <div class="about__green">
             <h3 class="nav_title">O firmie</h3>
-            <h2 class="section_title">
+            <h2 class="section_title wow animate__animated animate__fadeInRight" data-wow-duration=".6s" data-wow-delay=".6s">
                 Tworzymy z&nbsp;<span>pasją</span>
             </h2>
-            <p class="section_p">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i&nbsp;realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i&nbsp;elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
-            <button class="transp_btn"><a href="/o_firmie">Poznaj nas bliżej <img src="./images/arrow_green.svg" alt=""></a></button>
+            <p class="section_p wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="1s">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i&nbsp;realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i&nbsp;elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
+            <button class="transp_btn wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="1s"><a href="/o_firmie">Poznaj nas bliżej <img src="./images/arrow_green.svg" alt=""></a></button>
         </div>
         <div class="about__img">
             <img src="./images/garden.png" alt="ogród">
         </div>
 </section>
-<section id="realizacje">fff</section>
+<section id="realizacje">
+    <div class="title">
+        <div class="container">
+            <h3 class="nav_title">Realizacje</h3>
+            <h2 class="section_title wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">Nasze <span>projekty</span></h2>
+        </div>
+
+    </div>
+    <div id="macy-container" class="grid wow animate__animated animate__fadeIn" data-wow-duration="1.2s" data-wow-delay=".9s">
+        <div class="grid-item" data-name="ogród1" onclick="showPopup(this)"><img src="./images/gallery9.png" alt="ogród1"></div>
+        <div class="grid-item" data-name="ogród2" onclick="showPopup(this)"><img src="./images/gallery8.png" alt="ogród2"></div>
+        <div class="grid-item" data-name="ogród3" onclick="showPopup(this)"><img src="./images/gallery7.png" alt="ogród3"></div>
+        <div class="grid-item" data-name="ogród4" onclick="showPopup(this)"><img src="./images/gallery5.png" alt="ogród4"></div>
+        <div class="grid-item" data-name="ogród5" onclick="showPopup(this)"><img src="./images/gallery4.png" alt="ogród5"></div>
+        <div class="grid-item" data-name="ogród6" onclick="showPopup(this)"><img src="./images/gallery6.png" alt="ogród6"></div>
+        <div class="grid-item" data-name="ogród7" onclick="showPopup(this)"><img src="./images/gallery2.png" alt="ogród7"></div>
+        <div class="grid-item" data-name="ogród8" onclick="showPopup(this)"><img src="./images/gallery3.png" alt="ogród8"></div>
+        <div class="grid-item" data-name="ogród9" onclick="showPopup(this)"><img src="./images/gallery1.png" alt="ogród9"></div>
+        <div class="grid-item" data-name="ogród10" onclick="showPopup(this)"><img src="./images/gallery9.png" alt="ogród10"></div>
+        <div class="grid-item" data-name="ogród11" onclick="showPopup(this)"><img src="./images/gallery8.png" alt="ogród11"></div>
+        <div class="grid-item" data-name="ogród12" onclick="showPopup(this)"><img src="./images/gallery7.png" alt="ogród12"></div>
+        <div class="grid-item" data-name="ogród13" onclick="showPopup(this)"><img src="./images/gallery5.png" alt="ogród13"></div>
+        <div class="grid-item" data-name="ogród14" onclick="showPopup(this)"><img src="./images/gallery4.png" alt="ogród14"></div>
+        <div class="grid-item" data-name="ogród15" onclick="showPopup(this)"><img src="./images/gallery6.png" alt="ogród15"></div>
+        <div class="grid-item" data-name="ogród16" onclick="showPopup(this)"><img src="./images/gallery2.png" alt="ogród16"></div>
+        <div class="grid-item" data-name="ogród17" onclick="showPopup(this)"><img src="./images/gallery3.png" alt="ogród17"></div>
+        <div class="grid-item" data-name="ogród18" onclick="showPopup(this)"><img src="./images/gallery1.png" alt="ogród18"></div>
+    </div>
+    <div class="button">
+        <button class="transp_btn" onclick="buttonExit(this);">Rozwiń <img src="./images/arrow_green.svg" alt="strzałka w dół"></button>
+    </div>
+</section>
 <section id="instagram">
-    <div class="container insta">
+    <div class="container insta wow animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay=".6s">
         <div class="insta__left">
             <h2 class="section_title">Zostańmy w kontakcie!<br>Znajdziesz nas na <span>Instagramie.</span></h2>
         </div>
@@ -169,12 +212,40 @@
 
     </div>
 </section>
-
 </div>
 <footer>
+    <div class="container footer">
+        <div class="footer__up footer__item">
+            <div class="footer__up--logo">
+                <img src="./images/logo-footer.svg" alt="logo">
+            </div>
+            <div class="footer__up--contact">
+                <p>Daj znać, co możemy dla Ciebie zrobić!</p>
+                <button class="green_btn">Skontaktuj się z nami</button>
+            </div>
+        </div>
+        <div class="footer__middle footer__item">
+            <nav id ="navbar-footer" class="nav-menu">
+                <ul class=" nav-menu__footer">
+                    <li class="nav-menu__footer__item "><a href="/kontakt">Kontakt</a></li>
+                    <li class="nav-menu__footer__item "><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li class="nav-menu__footer__item "><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li class="nav-menu__footer__item "><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
 
+                </ul>
+            </nav>
+            <div class="socials">
+                <a href="tel:000000000">000-000-000</a>
+                <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+            </div>
+        </div>
+        <div class="footer__down footer__item">
+            <p>Prawa zastrzeżone © 2022</p>
+            <p>made by <img src="./images/logoAD.svg" alt="adRespect"></p>
+        </div>
+    </div>
 </footer>
-
+<script src="js/wow.min.js"></script>
 <script src="./main.js"></script>
 
 </body>

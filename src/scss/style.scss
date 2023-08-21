@@ -1,15 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
 @import '@splidejs/splide/css';
+@import 'animate.css';
 @import "color";
 @import "mixins";
 @import "./sections/header";
+@import "./sections/popup";
 @import "./sections/intro";
 @import "./sections/offer";
 @import "./sections/about";
+@import "./sections/gallery";
 @import "./sections/instagram";
+@import "./sections/footer";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+:root{
+  --g-height :1200px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +29,7 @@ body{
   overflow-x: hidden;
   section{
     padding: 120px 0 160px ;
+    overflow: hidden;
     @media(max-width: 992px){
       padding: 60px 0 80px ;
     }
@@ -29,6 +37,10 @@ body{
   ul, ol{
     margin: 0;
     padding: 0;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
   }
   h1,h2,h3,p,li,span{
     font-family: 'Inter', sans-serif;
@@ -77,13 +89,15 @@ body{
     font-size: 16px;
     border: none;
     padding: 0 24px;
-    @include btn-hover;
+
     a{
       color:$col-grey;
       text-align: center;
       font-size: 16px;
       text-decoration: none;
+      transition: color .4s;
     }
+    @include btn-hover;
   }
   button.transp_btn{
     border-radius: 200px;
@@ -94,17 +108,25 @@ body{
     border: 1px solid $col-green;
     font-size: 16px;
     padding: 0 22px;
-    @include btn-hover;
+
     a{
       color: $col-green;
       text-align: center;
       font-size: 16px;
       text-decoration: none;
+      transition: color .4s;
       img{
         padding-left: 8px;
         transform: translateY(-2px);
+        transition: filter .4s;
       }
     }
+    img{
+      padding-left: 8px;
+      transform: translateY(-2px);
+      transition: filter .4s;
+    }
+    @include btn-hover;
   }
   .blur{
     width: 100vw;
